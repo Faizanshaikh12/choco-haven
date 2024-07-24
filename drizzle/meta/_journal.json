@@ -8,6 +8,13 @@
       "when": 1721844487534,
       "tag": "0000_productive_amazoness",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1721846480531,
+      "tag": "0001_windy_domino",
+      "breakpoints": true
     }
   ]
 }
