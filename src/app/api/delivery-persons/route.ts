@@ -25,3 +25,18 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export async function GET() {
+  try {
+    const allDeliveryPersons = await db
+      .select()
+      .from(deliveryPersons)
+      .orderBy(desc(deliveryPersons.id));
+    return Response.json(allDeliveryPersons);
+  } catch (err) {
+    return Response.json(
+      { message: "Failed to fetch delivery persons" },
+      { status: 500 }
+    );
+  }
+}
