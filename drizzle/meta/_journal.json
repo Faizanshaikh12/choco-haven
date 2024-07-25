@@ -15,6 +15,20 @@
       "when": 1721846480531,
       "tag": "0001_windy_domino",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1721932027578,
+      "tag": "0002_optimal_boom_boom",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1721932103634,
+      "tag": "0003_eminent_lily_hollister",
+      "breakpoints": true
     }
   ]
 }
