@@ -1,6 +1,7 @@
 import { db } from "@/lib/db/db";
 import { warehouses } from "@/lib/db/schema";
 import { warehouseSchema } from "@/lib/validators/warehouseSchema copy";
+import { desc } from "drizzle-orm";
 
 export async function POST(request: Request) {
   const requestData = await request.json();
@@ -23,4 +24,13 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
+}
+
+export async function GET() {
+    try {
+        const allWarehouses = await db.select().from(warehouses).orderBy(desc(warehouses.id));
+        return Response.json(allWarehouses);
+    } catch (err) {
+        return Response.json({ message: 'Failed to fetch warehouses' }, { status: 500 });
+    }
 }
